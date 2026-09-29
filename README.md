@@ -31,12 +31,9 @@ I tillegg: **Innmeldte priser siste døgn** (diagnostikk), med antall for 7 og
 
 ### Adressen til backend
 
-Adressen er ikke publisert, så du må oppgi den selv. Slik finner du den:
-
-1. Åpne [web.drivstoffpriser.net](https://web.drivstoffpriser.net/) i en nettleser.
-2. Åpne utviklerverktøyene (F12) → fanen *Nettverk*.
-3. Last siden på nytt og se etter kall til `/stations` eller `/statistics`.
-   Alt før `/stations` er adressen, for eksempel `https://api.eksempel.no`.
+Standard er `https://api.drivstoffpriser.net`, som er adressen web-appen på
+[web.drivstoffpriser.net](https://web.drivstoffpriser.net/) bruker. Feltet kan
+endres ved oppsett hvis prosjektet flytter API-et.
 
 ## Endepunkter som brukes
 

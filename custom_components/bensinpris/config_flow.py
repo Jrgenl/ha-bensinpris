@@ -36,6 +36,7 @@ from .const import (
     CONF_PROVIDERS,
     CONF_RADIUS,
     CONF_SCAN_INTERVAL,
+    DEFAULT_BASE_URL,
     DEFAULT_FUEL_TYPES,
     DEFAULT_RADIUS_KM,
     DEFAULT_SCAN_INTERVAL_MIN,
@@ -88,7 +89,7 @@ class BensinprisConfigFlow(ConfigFlow, domain=DOMAIN):
 
         schema = vol.Schema(
             {
-                vol.Required(CONF_BASE_URL): TextSelector(
+                vol.Required(CONF_BASE_URL, default=DEFAULT_BASE_URL): TextSelector(
                     TextSelectorConfig(type=TextSelectorType.URL)
                 ),
                 vol.Required(

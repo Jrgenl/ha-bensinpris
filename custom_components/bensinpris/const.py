@@ -15,6 +15,8 @@ CONF_FUEL_TYPES = "fuel_types"
 CONF_PROVIDERS = "providers"
 CONF_SCAN_INTERVAL = "scan_interval_minutes"
 
+# Fra nettverkstrafikken til web.drivstoffpriser.net. Kan overstyres ved oppsett.
+DEFAULT_BASE_URL = "https://api.drivstoffpriser.net"
 DEFAULT_RADIUS_KM = 10
 DEFAULT_FUEL_TYPES = [GASOLINE_95, DIESEL]
 DEFAULT_SCAN_INTERVAL_MIN = 30

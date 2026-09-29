@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Bensinpris",
-        "description": "Reads open statistics from Drivstoffpriser. Find the backend address in the network traffic of web.drivstoffpriser.net.",
+        "description": "Reads open statistics from Drivstoffpriser. No account or API key needed.",
         "data": {
           "base_url": "Drivstoffpriser backend address",
           "location": "Search centre",
@@ -11,7 +11,7 @@
           "fuel_types": "Fuel types"
         },
         "data_description": {
-          "base_url": "For example https://api.example.com, without a trailing slash."
+          "base_url": "Leave as is unless the project moves its API."
         }
       }
     },

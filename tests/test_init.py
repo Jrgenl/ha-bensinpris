@@ -71,6 +71,21 @@ async def test_config_flow(hass, mock_client):
     assert result["data"]["base_url"] == BASE_URL  # skråstrek fjernet
 
 
+async def test_config_flow_uses_default_address(hass, mock_client):
+    result = await hass.config_entries.flow.async_init(
+        DOMAIN, context={"source": config_entries.SOURCE_USER}
+    )
+    user_input = {k: v for k, v in USER_INPUT.items() if k != "base_url"}
+    with patch(
+        "custom_components.bensinpris.async_setup_entry",
+        AsyncMock(return_value=True),
+    ):
+        result = await hass.config_entries.flow.async_configure(
+            result["flow_id"], user_input
+        )
+    assert result["data"]["base_url"] == "https://api.drivstoffpriser.net"
+
+
 async def test_config_flow_errors(hass):
     result = await hass.config_entries.flow.async_init(
         DOMAIN, context={"source": config_entries.SOURCE_USER}

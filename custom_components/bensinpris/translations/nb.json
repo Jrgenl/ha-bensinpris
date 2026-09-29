@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Bensinpris",
-        "description": "Henter åpen statistikk fra Drivstoffpriser. Adressen til backend finner du i nettverkstrafikken til web.drivstoffpriser.net.",
+        "description": "Henter åpen statistikk fra Drivstoffpriser. Krever verken konto eller API-nøkkel.",
         "data": {
           "base_url": "Adresse til Drivstoffpriser-backend",
           "location": "Sentrum for søket",
@@ -11,7 +11,7 @@
           "fuel_types": "Drivstofftyper"
         },
         "data_description": {
-          "base_url": "For eksempel https://api.eksempel.no, uten skråstrek til slutt."
+          "base_url": "La stå som den er, med mindre prosjektet flytter API-et."
         }
       }
     },
