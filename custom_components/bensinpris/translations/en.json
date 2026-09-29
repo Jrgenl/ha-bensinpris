@@ -1,0 +1,91 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Bensinpris",
+        "description": "Reads open statistics from Drivstoffpriser. Find the backend address in the network traffic of web.drivstoffpriser.net.",
+        "data": {
+          "base_url": "Drivstoffpriser backend address",
+          "location": "Search centre",
+          "radius": "Radius",
+          "fuel_types": "Fuel types"
+        },
+        "data_description": {
+          "base_url": "For example https://api.example.com, without a trailing slash."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No response from the backend at this address.",
+      "invalid_url": "The address must start with http:// or https://."
+    },
+    "abort": {
+      "already_configured": "This address and location are already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "radius": "Radius",
+          "fuel_types": "Fuel types",
+          "scan_interval_minutes": "Update interval",
+          "providers": "Chains with their own sensor"
+        }
+      }
+    }
+  },
+  "selector": {
+    "fuel_types": {
+      "options": {
+        "GASOLINE_95": "Petrol 95",
+        "GASOLINE_98": "Petrol 98",
+        "DIESEL": "Diesel"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "nearby_gasoline_95": {
+        "name": "Cheapest petrol 95 nearby"
+      },
+      "national_gasoline_95": {
+        "name": "Cheapest petrol 95 in Norway"
+      },
+      "cheapest_provider_gasoline_95": {
+        "name": "Cheapest chain petrol 95 (24 h)"
+      },
+      "provider_gasoline_95": {
+        "name": "{provider} petrol 95 (24 h average)"
+      },
+      "nearby_gasoline_98": {
+        "name": "Cheapest petrol 98 nearby"
+      },
+      "national_gasoline_98": {
+        "name": "Cheapest petrol 98 in Norway"
+      },
+      "cheapest_provider_gasoline_98": {
+        "name": "Cheapest chain petrol 98 (24 h)"
+      },
+      "provider_gasoline_98": {
+        "name": "{provider} petrol 98 (24 h average)"
+      },
+      "nearby_diesel": {
+        "name": "Cheapest diesel nearby"
+      },
+      "national_diesel": {
+        "name": "Cheapest diesel in Norway"
+      },
+      "cheapest_provider_diesel": {
+        "name": "Cheapest chain diesel (24 h)"
+      },
+      "provider_diesel": {
+        "name": "{provider} diesel (24 h average)"
+      },
+      "reports_24h": {
+        "name": "Price reports last 24 h"
+      }
+    }
+  }
+}

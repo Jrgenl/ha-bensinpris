@@ -1,0 +1,91 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Bensinpris",
+        "description": "Henter åpen statistikk fra Drivstoffpriser. Adressen til backend finner du i nettverkstrafikken til web.drivstoffpriser.net.",
+        "data": {
+          "base_url": "Adresse til Drivstoffpriser-backend",
+          "location": "Sentrum for søket",
+          "radius": "Radius",
+          "fuel_types": "Drivstofftyper"
+        },
+        "data_description": {
+          "base_url": "For eksempel https://api.eksempel.no, uten skråstrek til slutt."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Fikk ikke svar fra backend på denne adressen.",
+      "invalid_url": "Adressen må starte med http:// eller https://."
+    },
+    "abort": {
+      "already_configured": "Denne adressen og dette stedet er allerede satt opp."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Innstillinger",
+        "data": {
+          "radius": "Radius",
+          "fuel_types": "Drivstofftyper",
+          "scan_interval_minutes": "Oppdateringsintervall",
+          "providers": "Kjeder med egen sensor"
+        }
+      }
+    }
+  },
+  "selector": {
+    "fuel_types": {
+      "options": {
+        "GASOLINE_95": "Bensin 95",
+        "GASOLINE_98": "Bensin 98",
+        "DIESEL": "Diesel"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "nearby_gasoline_95": {
+        "name": "Billigste bensin 95 i nærheten"
+      },
+      "national_gasoline_95": {
+        "name": "Billigste bensin 95 i Norge"
+      },
+      "cheapest_provider_gasoline_95": {
+        "name": "Billigste kjede bensin 95 (24 t)"
+      },
+      "provider_gasoline_95": {
+        "name": "{provider} bensin 95 (snitt 24 t)"
+      },
+      "nearby_gasoline_98": {
+        "name": "Billigste bensin 98 i nærheten"
+      },
+      "national_gasoline_98": {
+        "name": "Billigste bensin 98 i Norge"
+      },
+      "cheapest_provider_gasoline_98": {
+        "name": "Billigste kjede bensin 98 (24 t)"
+      },
+      "provider_gasoline_98": {
+        "name": "{provider} bensin 98 (snitt 24 t)"
+      },
+      "nearby_diesel": {
+        "name": "Billigste diesel i nærheten"
+      },
+      "national_diesel": {
+        "name": "Billigste diesel i Norge"
+      },
+      "cheapest_provider_diesel": {
+        "name": "Billigste kjede diesel (24 t)"
+      },
+      "provider_diesel": {
+        "name": "{provider} diesel (snitt 24 t)"
+      },
+      "reports_24h": {
+        "name": "Innmeldte priser siste døgn"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "domain": "bensinpris",
+  "name": "Bensinpris",
+  "codeowners": [
+    "@Jrgenl"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/Jrgenl/ha-bensinpris",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Jrgenl/ha-bensinpris/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
